@@ -21,18 +21,11 @@ app.post('/webhook', async (req, res) => {
         },
       }); // Use getInstallationOctokit for authentication
 
-      const buildStatus = req.body.pull_request.head.statuses?.find((status: { context: string; }) => status.context === 'continuous-integration/default');
- // Get build status
-
-      const commentBody = buildStatus
-        ? `Build status: ${buildStatus.state}\n${buildStatus.target_url}`
-        : 'Build status not yet available.';
-
       await octokit.rest.issues.createComment({
         owner: req.body.repository.owner.login,
         repo: req.body.repository.name,
         issue_number: req.body.number,
-        body: commentBody,
+        body: 'Thanks for opening this pull request!',
       });
     }
 
