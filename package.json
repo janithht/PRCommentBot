@@ -1,15 +1,17 @@
 {
   "name": "your-app",
   "version": "1.0.0",
-  "type": "module",
+  "type": "commonjs",
   "dependencies": {
     "@octokit/app": "^14.0.2",
+    "@octokit/auth-app": "^6.0.3",
     "@octokit/core": "^5.1.0",
     "@octokit/plugin-rest-endpoint-methods": "^10.2.0",
     "@octokit/rest": "^20.0.2",
     "@octokit/types": "^12.4.0",
     "@octokit/webhooks": "^12.0.11",
     "@types/node": "^20.11.10",
+    "axios": "^1.6.7",
     "dotenv": "^16.4.1",
     "express": "^4.18.2",
     "ts-node": "^10.9.2",
